@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="./style/large-index.css">
+    <meta name="author" description="Gideon Edet">
+</head>
+
+<body>
+
+    <header>
+        <img src="./images/house.svg">
+        <span>Gideon Edet</span>
+        <button id="ham-btn" class="humburger" aria-label="Open navigation">
+            <span>☰</span>
+        </button>
+    </header>
+    <nav id="nav">
+        <ul class="navigation">
+            <li><a href='#''>Home</a></li>
+            <li><a href=' #'>Chamber Project</a></li>
+            <li><a href='#'>Final Project</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h2>Home</h2>
+
+        <section class="cards">
+
+            <article class="card about">
+
+                <h3>About Me</h3>
+                <p>Hello! My name is Gideon Edet, and I am a student with a growing passion for web development and
+                    technology. I enjoy learning how websites are designed and built, and I am continually improving
+                    my skills in HTML, CSS, and JavaScript. I believe that every project is an opportunity to learn
+                    something new and become a better developer.</p>
+
+            </article>
+
+
+            <aside class="card photo">
+
+                <h3>Student Photo</h3>
+
+                <img src="./images/profile.jpg">
+            </aside>
+
+        </section>
+
+
+        <section class="course">
+
+            <h3>Web Certificate Courses</h3>
+
+            <div class="buttons">
+                <button id="'all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <div class="course-list">
+                <button>WDD 130</button>
+                <button>WDD 131</button>
+                <button>WDD 231</button>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/gideonedet20" target="_blank"><img src="./images/github.svg"></a>
+
+                <a href="https://facebook.com/yourprofile" target="_blank"><img src="./images/facebook.svg"></a>
+        <p>©<span id="currentyear"></span>
+        Gideon Edet | Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+    <script src="scripts/app.js" defer></script>
+</body>
+
+</html>
