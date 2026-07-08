@@ -1,0 +1,37 @@
+/* Minimal normalize - resets browser inconsistencies */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border-style: none;
+}
+
+button {
+    font: inherit;
+    border: none;
+    background: none;
+}
+
+a {
+    background-color: transparent;
+}

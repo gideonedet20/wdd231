@@ -1,0 +1,57 @@
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 2.4rem;
+        padding: 0;
+    }
+
+    /* Header + nav share a row, hamburger disappears */
+    .site-header {
+        padding: 1rem 2rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .primary-nav {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .primary-nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .primary-nav a {
+        border-top: none;
+        padding: 0.9rem 1.5rem;
+    }
+
+    main {
+        padding: 0 2rem 3rem;
+    }
+
+    /* About Me / Student Photo side-by-side, unequal widths */
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+
+    /* Course filter buttons stay a fixed-width row instead of stretching edge to edge */
+    .course-filters {
+        max-width: 480px;
+    }
+
+    /* Course cards in a 3-column grid */
+    .course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

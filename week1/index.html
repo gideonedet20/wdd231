@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD231 | Gideon Edet</title>
+
+    <meta name="description"
+        content="Course home page for WDD 131 by Gideon Edet featuring web development projects, resources, and assignments.">
+
+    <meta name="author" content="Gideon Edet">
+
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+
+    <link href="https://fonts.googleapis.com/..." rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./scripts/navigation.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="branding">
+            <img class="logo" src="./images/house.svg" alt="Gideon Edet site logo" width="40" height="40">
+            <span class="site-name">Gideon Edet</span>
+        </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <nav id="primary-nav" class="primary-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="intro-grid">
+            <article class="card about">
+                <h2>About Me</h2>
+                <p>Hello! My name is Gideon Edet, and I am a student with a growing passion for web development and
+                    technology. I enjoy learning how websites are designed and built, and I am continually improving
+                    my skills in HTML, CSS, and JavaScript. I believe that every project is an opportunity to learn
+                    something new and become a better developer.</p>
+
+            </article>
+
+
+
+
+            <aside class="card photo">
+                <h2>Student Photo</h2>
+                <img src="./images/profile.jpg" alt="student photo">
+            </aside>
+
+        </section>
+
+
+        <section class="course-section">
+            <h3>Web Certificate Courses</h3>
+
+            <div class="course-filters">
+                <button id="all" class="filter-btn active">All</button>
+                <button id="wdd" class="filter-btn">WDD</button>
+                <button id="cse" class="filter-btn">CSE</button>
+            </div>
+
+            <div class="course-list"></div>
+            <p id="total-credits" class="total-credits"></p>
+        </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="social-links">
+            <a href="https://github.com/gideonedet20" target="_blank"><img src="./images/github.svg"
+                    alt="github svg"></a>
+
+            <a href="https://facebook.com/yourprofile" target="_blank"><img src="./images/facebook.svg"
+                    alt="facebook svg"></a>
+            <p class="copyright">©<span id="currentyear"></span> Gideon Edet | Nigeria</p>
+
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
