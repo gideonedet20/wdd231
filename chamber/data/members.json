@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "name": "RiverGold Oilfield Services Ltd.",
+      "address": "14 Trans-Amadi Industrial Layout, Port Harcourt, Rivers State",
+      "phone": "(084) 461-2290",
+      "url": "https://www.rivergoldoilfield.example.com",
+      "image": "rivergold.svg",
+      "membership": 3,
+      "founded": 2004,
+      "category": "Oil & Gas Services",
+      "tagline": "Wellhead equipment, maintenance, and field logistics for the Niger Delta."
+    },
+    {
+      "name": "Garden City Hotels & Suites",
+      "address": "22 Aba Road, Port Harcourt, Rivers State",
+      "phone": "(084) 233-7710",
+      "url": "https://www.gardencityhotels.example.com",
+      "image": "gardencity.svg",
+      "membership": 3,
+      "founded": 1998,
+      "category": "Hospitality",
+      "tagline": "Business-class rooms and event halls in the heart of the city."
+    },
+    {
+      "name": "Niger Delta Logistics Co.",
+      "address": "7 Harbour Road, Port Harcourt, Rivers State",
+      "phone": "(084) 355-1187",
+      "url": "https://www.ndlogistics.example.com",
+      "image": "ndlogistics.svg",
+      "membership": 2,
+      "founded": 2011,
+      "category": "Shipping & Logistics",
+      "tagline": "Freight forwarding and warehousing along the Bonny River corridor."
+    },
+    {
+      "name": "Trans-Amadi Tech Hub",
+      "address": "5B Woji Road, Port Harcourt, Rivers State",
+      "phone": "(084) 902-4456",
+      "url": "https://www.transamaditech.example.com",
+      "image": "techhub.svg",
+      "membership": 2,
+      "founded": 2019,
+      "category": "Technology & Coworking",
+      "tagline": "Coworking desks, dev training, and startup mentorship."
+    },
+    {
+      "name": "Rivers Fresh Market",
+      "address": "Mile 3 Market Road, Diobu, Port Harcourt, Rivers State",
+      "phone": "(084) 778-3302",
+      "url": "https://www.riversfreshmarket.example.com",
+      "image": "freshmarket.svg",
+      "membership": 1,
+      "founded": 2015,
+      "category": "Retail & Agriculture",
+      "tagline": "Wholesale produce sourced from farms across Rivers State."
+    },
+    {
+      "name": "Golden Delta Community Bank",
+      "address": "31 Olu Obasanjo Road, Port Harcourt, Rivers State",
+      "phone": "(084) 611-0075",
+      "url": "https://www.goldendeltabank.example.com",
+      "image": "goldendelta.svg",
+      "membership": 3,
+      "founded": 1991,
+      "category": "Banking & Finance",
+      "tagline": "Small-business loans and savings products for local entrepreneurs."
+    },
+    {
+      "name": "AgroLink Rivers",
+      "address": "18 Ada George Road, Port Harcourt, Rivers State",
+      "phone": "(084) 540-2216",
+      "url": "https://www.agrolinkrivers.example.com",
+      "image": "agrolink.svg",
+      "membership": 1,
+      "founded": 2021,
+      "category": "Agricultural Technology",
+      "tagline": "Connecting smallholder farmers to buyers with SMS-based market pricing."
+    },
+    {
+      "name": "Bonny Street Textiles",
+      "address": "9 Bonny Street, Port Harcourt, Rivers State",
+      "phone": "(084) 289-6641",
+      "url": "https://www.bonnystreettextiles.example.com",
+      "image": "bonnystreet.svg",
+      "membership": 1,
+      "founded": 2008,
+      "category": "Retail & Fashion",
+      "tagline": "Locally woven fabrics and made-to-order tailoring."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+/* =========================================================
+   Wider-view rules, layered on top of small.css
+   ========================================================= */
+
+/* ---------- Tablet: 640px+ ---------- */
+@media screen and (min-width: 640px) {
+  .directory-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .directory-wrapper.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Desktop: 900px+ ---------- */
+@media screen and (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    flex-basis: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  .primary-nav ul {
+    flex-direction: row;
+    gap: 1.6rem;
+    padding: 0;
+  }
+  .primary-nav a {
+    border-bottom: none;
+    padding: 0.3rem 0;
+  }
+
+  .directory-intro h1 {
+    font-size: 2.5rem;
+    max-width: 24ch;
+  }
+
+  .directory-wrapper.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+}
+
+/* ---------- Large desktop: 1180px+ ---------- */
+@media screen and (min-width: 1180px) {
+  .directory-wrapper.grid-view {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

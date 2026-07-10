@@ -1,0 +1,6 @@
+<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bonny Street Textiles logo">
+  <circle cx="48" cy="48" r="48" fill="#0A3428"/>
+  <circle cx="48" cy="48" r="16" fill="none" stroke="#F6F2E9" stroke-width="4"/>
+  <path d="M48 32v32M32 48h32" stroke="#F6F2E9" stroke-width="2"/>
+  <path d="M48 20c8 6 8 12 0 18M48 76c8-6 8-12 0-18M20 48c6-8 12-8 18 0M76 48c-6 8-12 8-18 0" stroke="#F6F2E9" stroke-width="3" fill="none"/>
+</svg>
