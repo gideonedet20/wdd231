@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A3428"/>
+      <stop offset="60%" stop-color="#0F4C3A"/>
+      <stop offset="100%" stop-color="#2E7D6B"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F4D999"/>
+      <stop offset="100%" stop-color="#C98A2B"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1260" cy="230" r="120" fill="url(#sun)" opacity="0.85"/>
+
+  <!-- distant rig / crane silhouettes -->
+  <g opacity="0.35" fill="#06251C">
+    <rect x="180" y="420" width="8" height="160"/>
+    <rect x="140" y="500" width="90" height="8"/>
+    <rect x="220" y="440" width="8" height="140"/>
+    <rect x="960" y="440" width="8" height="140"/>
+    <rect x="930" y="500" width="70" height="8"/>
+  </g>
+
+  <!-- city block silhouettes -->
+  <g fill="#06251C" opacity="0.55">
+    <rect x="60" y="560" width="70" height="180"/>
+    <rect x="140" y="520" width="55" height="220"/>
+    <rect x="205" y="590" width="60" height="150"/>
+    <rect x="1330" y="540" width="60" height="200"/>
+    <rect x="1400" y="580" width="55" height="160"/>
+    <rect x="1465" y="520" width="70" height="220"/>
+  </g>
+
+  <!-- palm trees flanking the scene, echoing the favicon mark -->
+  <g fill="#06251C">
+    <path d="M300 740V600" stroke="#06251C" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M300 600c0-38-34-60-72-60 0 38 30 64 72 60z"/>
+    <path d="M300 618c0-32 28-52 62-52 0 32-25 56-62 52z"/>
+    <path d="M300 634c0-28-26-46-56-46 0 28 24 48 56 46z"/>
+
+    <path d="M1230 760V640" stroke="#06251C" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M1230 640c0-32-29-52-62-52 0 32 26 55 62 52z"/>
+    <path d="M1230 655c0-27 24-44 53-44 0 27-21 47-53 44z"/>
+  </g>
+
+  <!-- river with gentle waves -->
+  <path d="M0 800c130-40 260-40 390 0s260 40 390 0 260-40 390 0 260 40 430 0V900H0z" fill="#0A3428"/>
+  <path d="M0 840c130-30 260-30 390 0s260 30 390 0 260-30 390 0 260 30 430 0V900H0z" fill="#06251C"/>
+</svg>

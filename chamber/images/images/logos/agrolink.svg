@@ -1,0 +1,6 @@
+<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AgroLink Rivers logo">
+  <circle cx="48" cy="48" r="48" fill="#2E7D6B"/>
+  <path d="M48 70V40" stroke="#F6F2E9" stroke-width="4"/>
+  <path d="M48 40c0-12-10-18-20-18 0 12 8 20 20 18z" fill="#F6F2E9"/>
+  <path d="M48 50c0-10 9-16 18-16 0 10-7 18-18 16z" fill="#F6F2E9"/>
+</svg>
