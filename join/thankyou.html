@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Port Harcourt Chamber of Commerce</title>
+  <meta name="description" content="Thank you for applying for membership with the Port Harcourt Chamber of Commerce.">
+  <meta name="author" content="Gideon Edet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="images/favicon.ico">
+
+  <!-- Facebook / Open Graph meta -->
+  <meta property="og:title" content="Port Harcourt Chamber of Commerce | Thank You">
+  <meta property="og:description" content="Thank you for applying for membership with the Port Harcourt Chamber of Commerce.">
+  <meta property="og:image" content="https://gideonedet20.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://gideonedet20.github.io/wdd231/chamber/thankyou.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS: normalize first, then mobile-first, then wider-view rules -->
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./styles/small.css">
+  <link rel="stylesheet" href="./styles/larger.css">
+
+  <script src="./scripts/thankyou.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="" class="brand-mark" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Port Harcourt</span>
+          <span class="brand-sub">Chamber of Commerce</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="../chamber/index.html">Home</a></li>
+          <li><a href="../chamber/directory.html">Directory</a></li>
+          <li><a href="./join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="thankyou-intro">
+      <p class="eyebrow">Application Received</p>
+      <h1>Thank you for applying, <span id="thankName">friend</span>!</h1>
+      <p class="intro-text">We've received your membership application and a member of our team will reach out within two business days. Here's a summary of what you submitted:</p>
+    </section>
+
+    <section aria-label="Submitted application summary">
+      <dl class="summary-card">
+        <div class="summary-row">
+          <dt>First Name</dt>
+          <dd id="sumFirstName"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Last Name</dt>
+          <dd id="sumLastName"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Email</dt>
+          <dd id="sumEmail"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Mobile Phone</dt>
+          <dd id="sumPhone"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Business/Organization</dt>
+          <dd id="sumOrgName"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Submitted</dt>
+          <dd id="sumTimestamp"></dd>
+        </div>
+      </dl>
+
+      <p><a href="../chamber/index.html">&larr; Back to home</a></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h2>Port Harcourt Chamber of Commerce</h2>
+        <address>
+          14 Aba Road, Port Harcourt<br>
+          Rivers State, Nigeria
+        </address>
+        <p><a href="tel:+2348041234567">(084) 123-4567</a></p>
+        <p><a href="mailto:info@phcchamber.example.com">info@phcchamber.example.com</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h2>Follow the Chamber</h2>
+        <ul class="social-list">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-meta">
+        <p>&copy; <span id="copyrightYear"></span> Gideon | Port Harcourt Chamber of Commerce</p>
+        <p>WDD 231 &mdash; Web Frontend Development I</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Chamber | Port Harcourt Chamber of Commerce</title>
+  <meta name="description"
+    content="Apply for membership with the Port Harcourt Chamber of Commerce. Choose from NP, Bronze, Silver, and Gold membership levels.">
+  <meta name="author" content="Gideon Edet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="images/favicon.ico">
+
+  <!-- Facebook / Open Graph meta -->
+  <meta property="og:title" content="Port Harcourt Chamber of Commerce | Join the Chamber">
+  <meta property="og:description"
+    content="Apply for membership with the Port Harcourt Chamber of Commerce. Choose from NP, Bronze, Silver, and Gold membership levels.">
+  <meta property="og:image" content="https://gideonedet20.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://gideonedet20.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS: normalize first, then mobile-first, then wider-view rules -->
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="./styles/small.css">
+  <link rel="stylesheet" href="./styles/larger.css">
+
+  <script src="./scripts/join.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="../chamber/images/favicon.ico" alt="" class="brand-mark" width="40" height="40">
+        <span class="brand-text">
+          <span class="brand-name">Port Harcourt</span>
+          <span class="brand-sub">Chamber of Commerce</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav">
+        <ul>
+          <li><a href="../chamber/index.html">Home</a></li>
+          <li><a href="../chamber/directory.html">Directory</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="join-intro">
+      <p class="eyebrow">Membership Application</p>
+      <h1>Join the Chamber</h1>
+      <p class="intro-text">Become part of a growing network of businesses building the Garden City. Fill out the
+        application below and our team will follow up within two business days.</p>
+    </section>
+
+    <section class="join-layout" aria-label="Membership application and levels">
+
+      <form class="app-form" method="get" action="thankyou.html">
+
+        <label for="firstName">
+          First Name
+          <input type="text" id="firstName" name="firstName" title="Your first name" autocomplete="given-name" required>
+        </label>
+
+        <label for="lastName">
+          Last Name
+          <input type="text" id="lastName" name="lastName" title="Your last name" autocomplete="family-name" required>
+        </label>
+
+        <label for="orgTitle">
+          Organizational Title
+          <input type="text" id="orgTitle" name="orgTitle" title="Your title within your organization"
+            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+          <span class="field-hint">Letters, spaces, and hyphens only &mdash; minimum 7 characters</span>
+        </label>
+
+        <label for="email">
+          Email Address
+          <input type="email" id="email" name="email" title="Your email address" autocomplete="email"
+            placeholder="you@example.com" required>
+        </label>
+
+        <label for="phone">
+          Mobile Phone Number
+          <input type="tel" id="phone" name="phone" title="Your mobile phone number" autocomplete="tel" required>
+        </label>
+
+        <label for="orgName">
+          Business/Organization Name
+          <input type="text" id="orgName" name="orgName" title="Your business or organization name"
+            autocomplete="organization" required>
+        </label>
+
+        <label for="membership">
+          Membership Level
+          <select id="membership" name="membership" title="Choose a membership level" required>
+            <option value="" disabled selected>Select a level&hellip;</option>
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label for="orgDescription">
+          Business/Organization Description
+          <textarea id="orgDescription" name="orgDescription" title="Describe your business or organization"
+            rows="5"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <input type="submit" value="Submit Application" class="submit-btn">
+
+      </form>
+
+      <div class="tier-cards">
+
+        <article class="tier-card tier-card-np">
+          <h2>NP Membership</h2>
+          <p class="tier-price">No fee</p>
+          <p>For registered non-profit organizations serving the Port Harcourt community.</p>
+          <button type="button" class="tier-link" data-modal="modal-np">Learn more</button>
+        </article>
+
+        <article class="tier-card tier-card-bronze">
+          <h2>Bronze Membership</h2>
+          <p class="tier-price">Entry level</p>
+          <p>Directory listing and access to Chamber networking events.</p>
+          <button type="button" class="tier-link" data-modal="modal-bronze">Learn more</button>
+        </article>
+
+        <article class="tier-card tier-card-silver">
+          <h2>Silver Membership</h2>
+          <p class="tier-price">Growing businesses</p>
+          <p>Everything in Bronze, plus event discounts and quarterly training.</p>
+          <button type="button" class="tier-link" data-modal="modal-silver">Learn more</button>
+        </article>
+
+        <article class="tier-card tier-card-gold">
+          <h2>Gold Membership</h2>
+          <p class="tier-price">Full benefits</p>
+          <p>Everything in Silver, plus homepage spotlight and priority advertising.</p>
+          <button type="button" class="tier-link" data-modal="modal-gold">Learn more</button>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="modal-np" role="dialog" aria-modal="true" aria-labelledby="modal-np-title">
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+      <h2 id="modal-np-title">NP Membership</h2>
+      <p class="tier-price">No fee</p>
+      <ul>
+        <li>Directory listing with your organization's mission</li>
+        <li>Invitations to community networking events</li>
+        <li>Access to Chamber volunteer opportunities</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-bronze" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title">
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+      <h2 id="modal-bronze-title">Bronze Membership</h2>
+      <p class="tier-price">Entry level</p>
+      <ul>
+        <li>Standard directory listing</li>
+        <li>Access to monthly networking mixers</li>
+        <li>Chamber newsletter subscription</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-silver" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title">
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+      <h2 id="modal-silver-title">Silver Membership</h2>
+      <p class="tier-price">Growing businesses</p>
+      <ul>
+        <li>Enhanced directory listing with logo seal</li>
+        <li>20% discount on Chamber-hosted events</li>
+        <li>Quarterly business training workshops</li>
+        <li>Early access to networking event registration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-gold" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title">
+    <div class="modal-box">
+      <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+      <h2 id="modal-gold-title">Gold Membership</h2>
+      <p class="tier-price">Full benefits</p>
+      <ul>
+        <li>Featured spotlight placement on the home page</li>
+        <li>Priority advertising in the member directory</li>
+        <li>40% discount on Chamber-hosted events</li>
+        <li>Unlimited access to training workshops</li>
+        <li>Dedicated Chamber account contact</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h2>Port Harcourt Chamber of Commerce</h2>
+        <address>
+          14 Aba Road, Port Harcourt<br>
+          Rivers State, Nigeria
+        </address>
+        <p><a href="tel:+2348041234567">(084) 123-4567</a></p>
+        <p><a href="mailto:info@phcchamber.example.com">info@phcchamber.example.com</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h2>Follow the Chamber</h2>
+        <ul class="social-list">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-meta">
+        <p>&copy; <span id="copyrightYear"></span> Gideon | Port Harcourt Chamber of Commerce</p>
+        <p>WDD 231 &mdash; Web Frontend Development I</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
