@@ -1,0 +1,142 @@
+[
+  {
+    "id": "yankari",
+    "name": "Yankari National Park",
+    "state": "Bauchi",
+    "zone": "North East",
+    "type": "National Park",
+    "established": "1956",
+    "blurb": "Nigeria's most visited game reserve — warm-spring bathing at Wikki, elephants, baboons, and open savanna game drives.",
+    "activity": "Game drives, warm-spring swimming, guided walks"
+  },
+  {
+    "id": "gashaka-gumti",
+    "name": "Gashaka-Gumti National Park",
+    "state": "Taraba",
+    "zone": "North East",
+    "type": "National Park",
+    "established": "1991",
+    "blurb": "Nigeria's largest park — misty highlands, chimpanzee populations, and the country's most demanding trekking terrain.",
+    "activity": "Multi-day trekking, primate tracking"
+  },
+  {
+    "id": "cross-river-np",
+    "name": "Cross River National Park",
+    "state": "Cross River",
+    "zone": "South South",
+    "type": "National Park",
+    "established": "1991",
+    "blurb": "Rainforest canopy and one of the last strongholds of the Cross River gorilla, split across the Okwangwo and Oban divisions.",
+    "activity": "Rainforest hikes, canopy walkways, birdwatching"
+  },
+  {
+    "id": "obudu",
+    "name": "Obudu Mountain Resort",
+    "state": "Cross River",
+    "zone": "South South",
+    "type": "Nature Park",
+    "established": "1951",
+    "blurb": "A cable-car ride onto the Obudu Plateau, with cool highland air, waterfalls, and views into Cameroon.",
+    "activity": "Cable car, plateau hiking, highland cabins"
+  },
+  {
+    "id": "kainji-lake",
+    "name": "Kainji Lake National Park",
+    "state": "Niger",
+    "zone": "North Central",
+    "type": "National Park",
+    "established": "1979",
+    "blurb": "Nigeria's oldest national park, built around the Kainji reservoir, with the Borgu game reserve's giraffe and buffalo herds.",
+    "activity": "Game viewing, boat trips on the lake"
+  },
+  {
+    "id": "old-oyo",
+    "name": "Old Oyo National Park",
+    "state": "Oyo",
+    "zone": "South West",
+    "type": "National Park",
+    "established": "1991",
+    "blurb": "Savanna parkland layered over the ruins of the old Oyo Empire capital — wildlife and archaeology in the same reserve.",
+    "activity": "Game viewing, ruins exploration"
+  },
+  {
+    "id": "chad-basin",
+    "name": "Chad Basin National Park",
+    "state": "Borno",
+    "zone": "North East",
+    "type": "National Park",
+    "established": "1991",
+    "blurb": "Semi-arid Sahel terrain around the shrinking Lake Chad basin, home to migratory birds and the Sambisa game reserve sector.",
+    "activity": "Birdwatching, Sahel landscape drives"
+  },
+  {
+    "id": "kamuku",
+    "name": "Kamuku National Park",
+    "state": "Kaduna",
+    "zone": "North West",
+    "type": "National Park",
+    "established": "1936",
+    "blurb": "Guinea savanna woodland on the Kaduna–Niger border, quieter and less visited than Nigeria's larger parks.",
+    "activity": "Guided bush walks, game viewing"
+  },
+  {
+    "id": "okomu",
+    "name": "Okomu National Park",
+    "state": "Edo",
+    "zone": "South South",
+    "type": "National Park",
+    "established": "1999",
+    "blurb": "Lowland rainforest sheltering forest elephants and the white-throated monkey, with a well-used canopy walkway.",
+    "activity": "Canopy walkway, forest trails"
+  },
+  {
+    "id": "lekki-conservation",
+    "name": "Lekki Conservation Centre",
+    "state": "Lagos",
+    "zone": "South West",
+    "type": "Urban Park",
+    "established": "1990",
+    "blurb": "A protected wetland inside the city, crossed by West Africa's longest canopy walkway, minutes from Lekki's beaches.",
+    "activity": "Canopy walkway, nature trail, picnic grounds"
+  },
+  {
+    "id": "millennium-park",
+    "name": "Millennium Park",
+    "state": "FCT (Abuja)",
+    "zone": "North Central",
+    "type": "Urban Park",
+    "established": "2003",
+    "blurb": "Abuja's largest public park, split into two landscaped halves by the airport road, with fountains and open lawns.",
+    "activity": "Walking paths, gardens, weekend picnics"
+  },
+  {
+    "id": "nike-lake",
+    "name": "Nike Lake Resort Park",
+    "state": "Enugu",
+    "zone": "South East",
+    "type": "Urban Park",
+    "established": "1978",
+    "blurb": "A landscaped lakeside resort park on Enugu's edge, built around a natural lake framed by hills.",
+    "activity": "Lakeside walks, boating, resort grounds"
+  },
+  {
+    "id": "isaac-boro",
+    "name": "Isaac Boro Garden Park",
+    "state": "Rivers",
+    "zone": "South South",
+    "type": "Urban Park",
+    "established": "2008",
+    "blurb": "A central Port Harcourt green space named for the Niger Delta activist, popular for evening walks and open-air events.",
+    "activity": "Evening walks, open-air events, food stalls"
+  },
+  {
+    "id": "freedom-park",
+    "name": "Freedom Park",
+    "state": "Lagos",
+    "zone": "South West",
+    "type": "Urban Park",
+    "established": "2010",
+    "blurb": "A former colonial-era prison on Lagos Island, converted into an open-air cultural and performance venue.",
+    "activity": "Live music, cultural events, museum corner"
+  }
+]

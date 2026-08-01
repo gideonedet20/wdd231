@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Parks — Naija Parks</title>
+  <meta name="description" content="Browse Nigeria's national parks, nature reserves, and urban parks, filterable by state and park type." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/small.css" />
+  <link rel="stylesheet" href="./styles/larger.css" media="screen and (min-width: 700px)" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="brand" href="index.html">Naija Parks <span>State &amp; National Parks</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="parks.html" aria-current="page">Browse Parks</a></li>
+        <li><a href="plan-visit.html">Plan a Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero contour-band" style="padding-bottom: 2rem;">
+      <div class="container hero-inner">
+        <span class="eyebrow">14 parks · 12 states</span>
+        <h1 style="font-size: clamp(1.8rem, 5vw, 2.6rem);">Pick a state, find its parks</h1>
+        <p class="lede">Tap a state to see what's protected there, narrow further by park type, or search directly by name or keyword.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 style="font-size: 0.95rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--clay); margin-bottom: 0.8rem;">State</h2>
+        <div class="state-selector" id="state-selector" role="group" aria-label="Filter by state"></div>
+
+        <h2 style="font-size: 0.95rem; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--clay); margin-bottom: 0.8rem;">Type</h2>
+        <div class="filter-row" id="type-filters" role="group" aria-label="Filter by park type"></div>
+
+        <div class="search-row">
+          <label for="park-search">Search by name, state, or keyword</label>
+          <input type="search" id="park-search" name="park-search" placeholder="e.g. canopy, Rivers, national park…" autocomplete="off" />
+        </div>
+
+        <p class="results-count" id="results-count" aria-live="polite">Loading parks…</p>
+        <div class="card-grid" id="parks-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Naija Parks</h4>
+          <p>A student web-development project mapping Nigeria's national parks, nature reserves, and urban parks by state.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parks.html">Browse Parks</a></li>
+            <li><a href="plan-visit.html">Plan a Visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Park types</h4>
+          <ul>
+            <li>National Park · Nature Park</li>
+            <li>Urban Park</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="current-year">2026</span> Naija Parks. Built for WDD 231.</span>
+        <span>Made in Uyo, Akwa Ibom</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/parks.js"></script>
+</body>
+</html>

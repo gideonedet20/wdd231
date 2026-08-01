@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naija Parks — Nigeria's State &amp; National Parks Explorer</title>
+  <meta name="description" content="Explore Nigeria's national parks, nature reserves, and urban parks by state — an interactive guide with search and filtering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/small.css" />
+  <link rel="stylesheet" href="./styles/larger.css" media="screen and (min-width: 700px)" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="brand" href="index.html">Naija Parks <span>State &amp; National Parks</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="parks.html">Browse Parks</a></li>
+        <li><a href="plan-visit.html">Plan a Visit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero contour-band">
+      <div class="container hero-inner">
+        <span class="eyebrow">12 states · 14 parks</span>
+        <h1>Nigeria's parks, state by state.</h1>
+        <p class="lede">From the savanna reserves of Yankari and Kainji Lake to city-centre green space like Lekki Conservation Centre and Isaac Boro Garden Park — pick a state and see what's protected, planted, or preserved there.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="parks.html">Browse by state</a>
+          <a class="btn btn-ghost" href="plan-visit.html">Plan a visit</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>14</dt><dd>Parks &amp; reserves</dd></div>
+          <div><dt>12</dt><dd>States covered</dd></div>
+          <div><dt>3</dt><dd>Park types</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Try it</span>
+          <h2>Not sure where to start?</h2>
+          <p>Tap the button for a random pick from the full list — a quick way to discover a park you weren't already looking for.</p>
+        </div>
+        <div class="picker-panel">
+          <h3>Don't know which park to visit?</h3>
+          <p>Let the guide choose one for you.</p>
+          <button class="btn btn-primary" id="surprise-btn" type="button">Surprise me with a park</button>
+          <div class="picker-result" id="surprise-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="split">
+          <div class="split-panel">
+            <span class="eyebrow" style="color: var(--clay);">Why by state</span>
+            <h3>Parks aren't evenly spread</h3>
+            <p>Nigeria's federal parks concentrate in a handful of states — Cross River alone holds two of the country's best-known reserves, while several states rely on a single well-kept urban park instead of a national one.</p>
+            <p>Sorting by state instead of by a flat national list makes it easier to plan around wherever a trip already starts, and to see at a glance which states pair a national park with a nearby urban option.</p>
+          </div>
+          <div class="split-panel">
+            <h3>Parks by zone</h3>
+            <ul class="region-list">
+              <li>North Central <span class="count">2 parks</span></li>
+              <li>North East <span class="count">3 parks</span></li>
+              <li>North West <span class="count">1 park</span></li>
+              <li>South East <span class="count">1 park</span></li>
+              <li>South South <span class="count">4 parks</span></li>
+              <li>South West <span class="count">3 parks</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contour-band">
+      <div class="container" style="text-align:center;">
+        <span class="eyebrow">Ready to browse?</span>
+        <h2 style="max-width: 32ch; margin-inline: auto;">Filter by state, type, or just search.</h2>
+        <p class="lede" style="margin-inline: auto;">The parks page lets you pick a state, narrow by park type, or search directly. The visit page covers permits, guides, and what to bring.</p>
+        <div class="hero-ctas" style="justify-content: center;">
+          <a class="btn btn-primary" href="parks.html">Browse parks</a>
+          <a class="btn btn-ghost" href="plan-visit.html">Plan a visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Naija Parks</h4>
+          <p>A student web-development project mapping Nigeria's national parks, nature reserves, and urban parks by state.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parks.html">Browse Parks</a></li>
+            <li><a href="plan-visit.html">Plan a Visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Park types</h4>
+          <ul>
+            <li>National Park · Nature Park</li>
+            <li>Urban Park</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="current-year">2026</span> Naija Parks. Built for WDD 231.</span>
+        <span>Made in Uyo, Akwa Ibom</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/picker.js"></script>
+</body>
+</html>

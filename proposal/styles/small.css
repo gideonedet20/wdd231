@@ -1,0 +1,467 @@
+/* ============================================================
+   NAIJA PARKS — State & National Parks Explorer
+   small.css — mobile-first base styles (default for all
+   screens; larger.css layers on top at wider viewports via
+   the <link media="screen and (min-width: 700px)"> attribute
+   in the HTML, not via @media queries in this file).
+   ============================================================ */
+:root {
+  --forest-900: #1F3D2B;
+  --forest-700: #2E5B3D;
+  --moss: #4F7942;
+  --moss-light: #7CA36B;
+  --gold: #C9A24B;
+  --gold-light: #E0C079;
+  --clay: #8A4A2E;
+  --cream: #F5F0E1;
+  --cream-card: #FBF8EF;
+  --ink: #201D16;
+  --ink-soft: #4A4438;
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Work Sans", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  --radius: 4px;
+  --max-width: 1180px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.55;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0 0 0.5em;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+p { margin: 0 0 1em; }
+ul { margin: 0; padding: 0; }
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Contour-line pattern — the signature textural device on this
+   site, standing in for a topographic trail map. Rendered as a
+   repeating inline SVG data-uri, used on dark forest bands only,
+   at low opacity.
+   ============================================================ */
+.contour-band {
+  position: relative;
+  background-color: var(--forest-900);
+  color: var(--cream);
+  overflow: hidden;
+}
+.contour-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23F5F0E1' stroke-width='1.2'%3E%3Cpath d='M-10 40 Q40 10 80 40 T170 40'/%3E%3Cpath d='M-10 80 Q40 50 80 80 T170 80'/%3E%3Cpath d='M-10 120 Q40 90 80 120 T170 120'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 160px 160px;
+  pointer-events: none;
+}
+.contour-band > * { position: relative; z-index: 1; }
+
+/* ============================================================
+   Header / Nav (mobile: stacked, hamburger toggle)
+   ============================================================ */
+.site-header {
+  background: var(--forest-900);
+  color: var(--cream);
+  border-bottom: 3px solid var(--gold);
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--cream);
+}
+.brand span {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.13em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+}
+.nav-toggle {
+  background: none;
+  border: 2px solid var(--cream);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.6rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: inline-flex;
+}
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.nav-links.is-open { display: flex; }
+.nav-links a {
+  display: block;
+  padding: 0.85rem 1.25rem;
+  text-decoration: none;
+  border-top: 1px solid rgba(245,240,225,0.15);
+}
+.nav-links a[aria-current="page"] { color: var(--gold-light); }
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero { padding: 3.2rem 0 2.6rem; }
+.hero-inner { max-width: 640px; }
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: var(--gold-light);
+  margin-bottom: 0.9rem;
+  display: inline-block;
+}
+.hero h1 { font-size: clamp(2rem, 7vw, 3rem); font-weight: 700; }
+.hero p.lede {
+  font-size: 1.05rem;
+  color: rgba(245,240,225,0.88);
+  max-width: 46ch;
+}
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-top: 1.8rem;
+  font-family: var(--font-mono);
+}
+.hero-stats dt { font-size: 1.7rem; font-weight: 700; color: var(--cream); }
+.hero-stats dd {
+  margin: 0;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 0.72rem 1.3rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--gold); color: var(--forest-900); font-weight: 700; }
+.btn-primary:hover { background: var(--gold-light); }
+.btn-ghost { background: transparent; border-color: var(--cream); color: var(--cream); }
+.btn-ghost:hover { background: rgba(245,240,225,0.1); }
+.hero-ctas { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.7rem; }
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.section { padding: 3rem 0; }
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.7rem;
+  max-width: 60ch;
+}
+.section-head .eyebrow { color: var(--clay); }
+.section-head h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--forest-900); }
+.section-head p { color: var(--ink-soft); }
+.section-alt { background: var(--cream-card); border-top: 1px solid rgba(31,61,43,0.08); border-bottom: 1px solid rgba(31,61,43,0.08); }
+
+/* ============================================================
+   State selector — the primary interactive control
+   ============================================================ */
+.state-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+.state-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background: var(--cream-card);
+  border: 2px solid var(--forest-900);
+  color: var(--forest-900);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.4rem;
+  text-align: center;
+  cursor: pointer;
+}
+.state-btn[aria-pressed="true"] { background: var(--forest-900); color: var(--cream); }
+.filter-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: transparent;
+  border: 1px solid var(--ink-soft);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--forest-900); font-weight: 700; }
+.results-count { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 1rem; }
+.empty-state {
+  font-family: var(--font-mono);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--ink-soft);
+  border: 1px dashed var(--ink-soft);
+  border-radius: var(--radius);
+}
+
+/* ============================================================
+   Park cards
+   ============================================================ */
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 1.3rem; }
+.card {
+  background: var(--cream-card);
+  border: 1px solid rgba(31,61,43,0.12);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card-art {
+  height: 120px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.65rem 0.85rem;
+}
+.card-art::before {
+  content: "";
+  position: absolute; inset: 0;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23F5F0E1' stroke-width='1'%3E%3Cpath d='M0 20 Q15 8 30 20 T60 20'/%3E%3Cpath d='M0 40 Q15 28 30 40 T60 40'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+.card-art span {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  background: rgba(31,61,43,0.55);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius);
+}
+.art-national-park { background: var(--forest-700); }
+.art-nature-park { background: var(--moss); }
+.art-urban-park { background: var(--clay); }
+
+.card-body { padding: 1.05rem 1.15rem 1.25rem; flex: 1; display: flex; flex-direction: column; }
+.card-body h3 { font-size: 1.1rem; color: var(--forest-900); margin-bottom: 0.2rem; }
+.card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clay);
+  margin-bottom: 0.55rem;
+}
+.card-facts {
+  display: flex;
+  gap: 1.1rem;
+  margin: 0 0 0.65rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(31,61,43,0.1);
+}
+.card-facts dt {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--clay);
+  margin-bottom: 0.1rem;
+}
+.card-facts dd { margin: 0; font-size: 0.83rem; font-weight: 600; }
+.card-body p { color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 0; flex: 1; }
+
+/* ============================================================
+   Search field
+   ============================================================ */
+.search-row { margin-bottom: 1.5rem; max-width: 420px; }
+.search-row label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+}
+.search-row input[type="search"] {
+  width: 100%;
+  padding: 0.62rem 0.85rem;
+  border: 2px solid var(--forest-900);
+  border-radius: var(--radius);
+  background: var(--cream-card);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+.search-row input[type="search"]::placeholder { color: var(--ink-soft); opacity: 0.7; }
+
+/* ============================================================
+   Tip cards / fact strip (Plan Your Visit page)
+   ============================================================ */
+.tips-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
+.tip-card {
+  background: var(--cream-card);
+  border-left: 4px solid var(--gold);
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius);
+}
+.tip-card h3 {
+  font-size: 1.02rem;
+  color: var(--forest-900);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tip-card .num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  width: 1.55rem; height: 1.55rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.tip-card p { color: var(--ink-soft); font-size: 0.92rem; margin: 0; }
+
+.fact-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(245,240,225,0.15); border-radius: var(--radius); overflow: hidden; }
+.fact { background: var(--forest-900); padding: 1.25rem 1rem; text-align: center; }
+.fact dt { font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 0.35rem; }
+.fact dd { margin: 0; font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; }
+
+/* ============================================================
+   Random-pick interactive widget (home page)
+   ============================================================ */
+.picker-panel {
+  background: var(--cream-card);
+  border: 1px solid rgba(31,61,43,0.12);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+}
+.picker-panel h3 { color: var(--forest-900); }
+.picker-result {
+  margin-top: 1.1rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--forest-900);
+  color: var(--cream);
+  display: none;
+}
+.picker-result.is-visible { display: block; }
+.picker-result .park-name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem; }
+.picker-result .park-meta { font-family: var(--font-mono); font-size: 0.72rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+.picker-result p { color: rgba(245,240,225,0.9); font-size: 0.9rem; margin: 0; }
+
+/* ============================================================
+   Two-column content block (home page)
+   ============================================================ */
+.split { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; }
+.split-panel {
+  background: var(--cream-card);
+  border: 1px solid rgba(31,61,43,0.12);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.45rem;
+}
+.split-panel h3 { color: var(--forest-900); font-size: 1.08rem; }
+.region-list li {
+  list-style: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(31,61,43,0.08);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.region-list li:last-child { border-bottom: none; }
+.region-list span.count { font-family: var(--font-mono); color: var(--clay); font-size: 0.78rem; }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer { background: var(--forest-900); color: rgba(245,240,225,0.75); padding: 2.4rem 0 1.5rem; font-size: 0.88rem; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 1.7rem; margin-bottom: 1.9rem; }
+.site-footer h4 { color: var(--cream); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-mono); margin-bottom: 0.65rem; }
+.site-footer ul { list-style: none; }
+.site-footer li { margin-bottom: 0.4rem; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.footer-bottom {
+  border-top: 1px solid rgba(245,240,225,0.15);
+  padding-top: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}

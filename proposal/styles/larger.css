@@ -1,0 +1,55 @@
+/* ============================================================
+   NAIJA PARKS — larger.css
+   Loaded only when the viewport is at least 700px wide, via
+   <link rel="stylesheet" href="css/larger.css"
+         media="screen and (min-width: 700px)">
+   Contains overrides layered on top of small.css — not a full
+   restatement of it.
+   ============================================================ */
+
+/* Nav becomes a horizontal bar; hamburger hidden */
+.nav-toggle { display: none; }
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.nav-links a {
+  border-top: none;
+  padding: 0.4rem 0;
+  margin-left: 1.8rem;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover, .nav-links a[aria-current="page"] {
+  border-bottom-color: var(--gold);
+}
+
+/* Roomier hero */
+.hero { padding: 4.2rem 0 3.4rem; }
+
+/* Two-up state selector grows to three, then six at wider still */
+.state-selector { grid-template-columns: repeat(3, 1fr); }
+
+/* Card grids: two columns at 700px */
+.card-grid { grid-template-columns: repeat(2, 1fr); }
+
+/* Tip cards: two columns */
+.tips-grid { grid-template-columns: repeat(2, 1fr); }
+
+/* Fact strip: four across */
+.fact-strip { grid-template-columns: repeat(4, 1fr); }
+
+/* Footer: three columns */
+.footer-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* Two-column split content block */
+.split { grid-template-columns: 1.1fr 0.9fr; gap: 2.4rem; }
+
+/* Picker panel gets breathing room */
+.picker-panel { padding: 2rem 2.5rem; }
+
+/* Further scale-up for wide desktop screens */
+@media (min-width: 980px) {
+  .state-selector { grid-template-columns: repeat(6, 1fr); }
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
