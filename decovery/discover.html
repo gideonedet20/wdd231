@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Port Harcourt | Port Harcourt Chamber of Commerce</title>
+  <meta name="description"
+    content="Discover eight places that define Port Harcourt and Rivers State, curated by the Port Harcourt Chamber of Commerce for prospective members and visitors." />
+  <meta name="author" content="Gideon Edet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/normalize (2).css" />
+  <link rel="stylesheet" href="./styles/small (1).css" />
+  <link rel="stylesheet" href="./styles/medium.css" media="screen and (min-width: 641px)" />
+  <link rel="stylesheet" href="./styles/larger (1).css" media="screen and (min-width: 1025px)" />
+  <script src="./script/discover.js"></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/ph-mall.webp" alt="" width="40" height="40" style="border-radius:4px;object-fit:cover;" />
+      <div class="brand-text">
+        Port Harcourt Chamber
+        <small>of Commerce</small>
+      </div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+  </header>
+
+  <nav class="primary-nav" id="primaryNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html" aria-current="page">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="discover-intro">
+      <p class="eyebrow">Discover the area</p>
+      <h1>Eight places that show you who Port Harcourt is</h1>
+      <p>From the river that gave the city its trade to the park that gave it a gathering place, these are the stops the
+        Chamber points prospective members and visitors toward first.</p>
+    </section>
+
+    <div class="visit-note" id="visitNote" hidden>
+      <div class="visit-note__inner">
+        <span id="visitMessage"></span>
+        <button type="button" id="visitNoteClose" aria-label="Dismiss message">&times;</button>
+      </div>
+    </div>
+
+    <section class="discovery-grid" id="discoveryGrid" aria-label="Items of interest">
+      <!-- Cards are rendered here by scripts/discover.js from data/discover.mjs -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Port Harcourt Chamber of Commerce &mdash; Gideon Edet, WDD 231</p>
+      <p><a href="join.html">Become a member</a> &middot; <a href="directory.html">View the directory</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

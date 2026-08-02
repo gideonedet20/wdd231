@@ -1,0 +1,345 @@
+/* styles/small.css — base + small screens (320px–640px) */
+
+:root {
+  /* Color: Niger Delta river-city palette */
+  --color-river: #0B3D3E;   /* deep river teal — header, footer, dark sections */
+  --color-garden: #2F6F4E;  /* garden-city green — secondary accent */
+  --color-gold: #E8A33D;    /* sunset-on-water gold — primary accent, CTAs */
+  --color-clay: #8A5A2E;    /* dried river clay — tertiary accent */
+  --color-rust: #B5533C;    /* muted rust — hover/link state */
+  --color-paper: #F5EFE3;   /* warm paper — page background */
+  --color-card: #FFFFFF;
+  --color-ink: #1A1E1B;     /* near-black text */
+  --color-ink-soft: #4A5450;
+
+  /* Type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --radius: 6px;
+  --gap: 1.25rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  line-height: 1.55;
+}
+
+/* ---------- Header & nav ---------- */
+.site-header {
+  background: var(--color-river);
+  color: var(--color-paper);
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-header .brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.site-header .brand-text {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.site-header .brand-text small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.nav-toggle {
+  background: none;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.primary-nav {
+  background: var(--color-river);
+  border-top: 1px solid rgba(245, 239, 227, 0.15);
+}
+
+.primary-nav ul {
+  display: none;
+  flex-direction: column;
+}
+
+.primary-nav.open ul {
+  display: flex;
+}
+
+.primary-nav a {
+  display: block;
+  padding: 0.85rem 1.1rem;
+  color: var(--color-paper);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(245, 239, 227, 0.08);
+}
+
+.primary-nav a[aria-current="page"] {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+/* ---------- Page intro ---------- */
+.discover-intro {
+  padding: 1.75rem 1rem 1rem;
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+.discover-intro .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-rust);
+}
+
+.discover-intro h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 6vw, 2.8rem);
+  font-weight: 600;
+  color: var(--color-river);
+  margin-top: 0.3rem;
+}
+
+.discover-intro p {
+  max-width: 42rem;
+  margin-top: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+/* ---------- Visit note (localStorage message) ---------- */
+.visit-note {
+  max-width: 62rem;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+}
+
+.visit-note__inner {
+  background: var(--color-gold);
+  color: var(--color-river);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.visit-note__inner button {
+  background: none;
+  border: none;
+  color: var(--color-river);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+}
+
+.visit-note[hidden] { display: none; }
+
+/* ---------- Discovery grid: small = single-column trail ---------- */
+.discovery-grid {
+  max-width: 62rem;
+  margin: 1.5rem auto 3rem;
+  padding: 0 1rem;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.discover-card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(11, 61, 62, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card[data-card="card1"] { grid-area: card1; }
+.discover-card[data-card="card2"] { grid-area: card2; }
+.discover-card[data-card="card3"] { grid-area: card3; }
+.discover-card[data-card="card4"] { grid-area: card4; }
+.discover-card[data-card="card5"] { grid-area: card5; }
+.discover-card[data-card="card6"] { grid-area: card6; }
+.discover-card[data-card="card7"] { grid-area: card7; }
+.discover-card[data-card="card8"] { grid-area: card8; }
+
+.discover-card figure {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  background: var(--color-river);
+  overflow: hidden;
+}
+
+.discover-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discover-card .stop-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: rgba(11, 61, 62, 0.85);
+  color: var(--color-gold);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.discover-card .card-body {
+  padding: 1rem 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.discover-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-river);
+}
+
+.discover-card address {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-clay);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.discover-card p {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  flex: 1;
+}
+
+.discover-card .learn-more {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  background: var(--color-river);
+  color: var(--color-paper);
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.discover-card .learn-more:hover,
+.discover-card .learn-more:focus-visible {
+  background: var(--color-rust);
+}
+
+/* Keyboard focus visibility (kept consistent across breakpoints) */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ---------- Learn more dialog ---------- */
+.learn-more-dialog {
+  border: none;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: calc(100% - 2rem);
+  box-shadow: 0 10px 30px rgba(11, 61, 62, 0.25);
+}
+
+.learn-more-dialog::backdrop {
+  background: rgba(11, 61, 62, 0.55);
+}
+
+.learn-more-dialog h2 {
+  font-family: var(--font-display);
+  color: var(--color-river);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.learn-more-dialog address {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-clay);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.learn-more-dialog p {
+  color: var(--color-ink-soft);
+  margin-bottom: 1.25rem;
+}
+
+.learn-more-dialog button {
+  background: var(--color-river);
+  color: var(--color-paper);
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--color-river);
+  color: var(--color-paper);
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.site-footer .footer-inner {
+  max-width: 62rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.site-footer a {
+  color: var(--color-gold);
+  text-decoration: none;
+}

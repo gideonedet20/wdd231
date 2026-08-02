@@ -1,0 +1,65 @@
+/* styles/medium.css — loaded via media="screen and (min-width: 641px)" */
+
+.nav-toggle { display: none; }
+
+.primary-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.primary-nav a {
+  border-bottom: none;
+  padding: 0.9rem 1.2rem;
+}
+
+.discover-intro {
+  padding-top: 2.25rem;
+}
+
+/* ---------- Discovery grid: medium = 2-column mosaic ----------
+   Not a uniform 2-up grid — card1 and card6 span both columns to
+   read as trailhead / waypoint markers along the route. */
+.discovery-grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "card1 card1"
+    "card2 card3"
+    "card4 card5"
+    "card6 card6"
+    "card7 card8";
+  gap: 1.5rem;
+}
+
+.discover-card[data-card="card1"],
+.discover-card[data-card="card6"] {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.discover-card[data-card="card1"] figure,
+.discover-card[data-card="card6"] figure {
+  flex: 1 1 42%;
+  aspect-ratio: auto;
+}
+
+.discover-card[data-card="card1"] .card-body,
+.discover-card[data-card="card6"] .card-body {
+  flex: 1 1 58%;
+  justify-content: center;
+}
+
+/* ---------- Hover effect on gallery images (medium and up only) ---------- */
+.discover-card figure img {
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.discover-card:hover figure img {
+  transform: scale(1.06);
+  filter: saturate(1.15) brightness(1.03);
+}
+
+.discover-card:hover .stop-label {
+  background: var(--color-gold);
+  color: var(--color-river);
+}
