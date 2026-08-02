@@ -1,0 +1,63 @@
+/* style/larger.css — wider-viewport rules (1024px and up), wrapped in an
+   internal media query so it's safe whether this file is linked with or
+   without a media="" attribute on the <link> tag. */
+
+@media screen and (min-width: 1024px) {
+
+  .site-header {
+    padding: 1.1rem 2.5rem;
+  }
+
+  .nav-toggle { display: none; }
+
+  .primary-nav {
+    flex-basis: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    border-top: none;
+    margin-top: 0;
+  }
+
+  .primary-nav a {
+    padding: 0.5rem 1.1rem;
+    border-bottom: none;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero-overlay {
+    padding: 5rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+  }
+
+  /* ---------- Info + weather ---------- */
+  .info-weather {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4rem 2.5rem;
+    gap: 3rem;
+  }
+
+  .info-col { flex: 1 1 55%; }
+  .weather-col { flex: 1 1 40%; }
+
+  /* ---------- Spotlight ---------- */
+  .spotlight {
+    padding: 1.5rem 2.5rem 4rem;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ---------- Footer ---------- */
+  .footer-inner {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}

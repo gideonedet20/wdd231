@@ -1,0 +1,360 @@
+/* style/discover.css
+   Page-specific styles for discover.html only — loaded after normalize.css,
+   small.css and larger.css, so it does not touch header/nav/footer styling,
+   which your existing stylesheets already own.
+
+   NOTE: I don't have your real small.css/larger.css, so the colors below are
+   placeholder custom properties (--disc-*), namespaced so they can't collide
+   with tokens you already have. If your site defines its own color variables
+   (e.g. --clr-primary), swap the values below to match instead of keeping
+   two separate palettes. Fonts already match your real font stack
+   (Fraunces / Work Sans / JetBrains Mono).
+*/
+
+:root {
+  --disc-river: #0B3D3E;
+  --disc-garden: #2F6F4E;
+  --disc-gold: #E8A33D;
+  --disc-clay: #8A5A2E;
+  --disc-rust: #B5533C;
+  --disc-ink-soft: #4A5450;
+  --disc-radius: 6px;
+  --disc-gap: 1.25rem;
+}
+
+/* ---------- Intro ---------- */
+.discover-intro {
+  padding: 1.75rem 1rem 1rem;
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+.discover-intro h1 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.9rem, 6vw, 2.8rem);
+  font-weight: 600;
+  color: var(--disc-river);
+  margin-top: 0.3rem;
+}
+
+.discover-intro .hero-text {
+  max-width: 42rem;
+  margin-top: 0.75rem;
+  color: var(--disc-ink-soft);
+  font-family: "Work Sans", sans-serif;
+}
+
+/* ---------- Visit note (localStorage message) ---------- */
+.visit-note {
+  max-width: 62rem;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+}
+
+.visit-note__inner {
+  background: var(--disc-gold);
+  color: var(--disc-river);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--disc-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.visit-note__inner button {
+  background: none;
+  border: none;
+  color: var(--disc-river);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+  cursor: pointer;
+}
+
+.visit-note[hidden] { display: none; }
+
+/* ---------- Discovery grid: small screens (320px-640px) = single-column trail ---------- */
+.discovery-grid {
+  max-width: 62rem;
+  margin: 1.5rem auto 3rem;
+  padding: 0 1rem;
+  display: grid;
+  gap: var(--disc-gap);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.discover-card {
+  background: #FFFFFF;
+  border-radius: var(--disc-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(11, 61, 62, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card[data-card="card1"] { grid-area: card1; }
+.discover-card[data-card="card2"] { grid-area: card2; }
+.discover-card[data-card="card3"] { grid-area: card3; }
+.discover-card[data-card="card4"] { grid-area: card4; }
+.discover-card[data-card="card5"] { grid-area: card5; }
+.discover-card[data-card="card6"] { grid-area: card6; }
+.discover-card[data-card="card7"] { grid-area: card7; }
+.discover-card[data-card="card8"] { grid-area: card8; }
+
+.discover-card figure {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  background: var(--disc-river);
+  overflow: hidden;
+  margin: 0;
+}
+
+.discover-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-card .stop-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: rgba(11, 61, 62, 0.85);
+  color: var(--disc-gold);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.discover-card .card-body {
+  padding: 1rem 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.discover-card h2 {
+  font-family: "Fraunces", serif;
+  font-size: 1.2rem;
+  color: var(--disc-river);
+  margin: 0;
+}
+
+.discover-card address {
+  font-family: "JetBrains Mono", monospace;
+  font-style: normal;
+  font-size: 0.72rem;
+  color: var(--disc-clay);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.discover-card p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--disc-ink-soft);
+  flex: 1;
+  margin: 0;
+}
+
+.discover-card .learn-more {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  background: var(--disc-river);
+  color: #F5EFE3;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: var(--disc-radius);
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.discover-card .learn-more:hover,
+.discover-card .learn-more:focus-visible {
+  background: var(--disc-rust);
+}
+
+/* ---------- Learn more dialog ---------- */
+.learn-more-dialog {
+  border: none;
+  border-radius: var(--disc-radius);
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: calc(100% - 2rem);
+  box-shadow: 0 10px 30px rgba(11, 61, 62, 0.25);
+}
+
+.learn-more-dialog::backdrop {
+  background: rgba(11, 61, 62, 0.55);
+}
+
+.learn-more-dialog h2 {
+  font-family: "Fraunces", serif;
+  color: var(--disc-river);
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+
+.learn-more-dialog address {
+  font-family: "JetBrains Mono", monospace;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--disc-clay);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.learn-more-dialog p {
+  font-family: "Work Sans", sans-serif;
+  color: var(--disc-ink-soft);
+  margin: 0 0 1.25rem;
+}
+
+.learn-more-dialog .learn-more-close {
+  background: var(--disc-river);
+  color: #F5EFE3;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--disc-radius);
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================================================
+   MEDIUM SCREENS (641px - 1024px)
+   2-column mosaic — card1 and card6 span both columns as
+   waypoint markers, so this is a genuinely different shape
+   from the single-column stack, not just an extra column.
+   ========================================================= */
+@media screen and (min-width: 641px) {
+
+  .discover-intro { padding-top: 2.25rem; }
+
+  .discovery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card5"
+      "card6 card6"
+      "card7 card8";
+    gap: 1.5rem;
+  }
+
+  .discover-card[data-card="card1"],
+  .discover-card[data-card="card6"] {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .discover-card[data-card="card1"] figure,
+  .discover-card[data-card="card6"] figure {
+    flex: 1 1 42%;
+    aspect-ratio: auto;
+  }
+
+  .discover-card[data-card="card1"] .card-body,
+  .discover-card[data-card="card6"] .card-body {
+    flex: 1 1 58%;
+    justify-content: center;
+  }
+
+  /* Hover effect on gallery images — medium screens and up only */
+  .discover-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .discover-card:hover figure img {
+    transform: scale(1.06);
+    filter: saturate(1.15) brightness(1.03);
+  }
+
+  .discover-card:hover .stop-label {
+    background: var(--disc-gold);
+    color: var(--disc-river);
+  }
+}
+
+/* =========================================================
+   LARGE SCREENS (1025px and up)
+   Asymmetric 3-column "river meander" mosaic — card2, card3
+   and card6 span two rows each, a different structure again,
+   not the medium layout with one more column bolted on.
+   ========================================================= */
+@media screen and (min-width: 1025px) {
+
+  .discover-intro,
+  .visit-note {
+    max-width: 76rem;
+  }
+
+  .discover-intro { padding: 3rem 2.5rem 1.5rem; }
+  .visit-note { padding: 0 2.5rem; }
+
+  .discovery-grid {
+    max-width: 76rem;
+    padding: 0 2.5rem;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(200px, auto));
+    grid-template-areas:
+      "card1 card1 card2"
+      "card3 card4 card2"
+      "card3 card5 card6"
+      "card7 card8 card6";
+    gap: 1.75rem;
+  }
+
+  .discover-card { height: 100%; }
+
+  .discover-card[data-card="card2"],
+  .discover-card[data-card="card3"],
+  .discover-card[data-card="card6"] {
+    flex-direction: column;
+  }
+
+  .discover-card[data-card="card2"] figure,
+  .discover-card[data-card="card3"] figure,
+  .discover-card[data-card="card6"] figure {
+    flex: 1;
+    aspect-ratio: auto;
+  }
+
+  .discover-card[data-card="card1"] {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .discover-card[data-card="card1"] figure {
+    flex: 1 1 45%;
+    aspect-ratio: auto;
+  }
+
+  .discover-card[data-card="card1"] .card-body {
+    flex: 1 1 55%;
+    justify-content: center;
+  }
+
+  .discover-card h2 { font-size: 1.35rem; }
+}
