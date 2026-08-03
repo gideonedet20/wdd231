@@ -2,15 +2,22 @@
 
 :root {
   /* Color: Niger Delta river-city palette */
-  --clr-river: #0B3D3E;       /* deep river teal — header, footer, dark surfaces */
-  --clr-garden: #2F6F4E;      /* garden-city green — secondary accent */
-  --clr-gold: #E8A33D;        /* sunset-on-water gold — CTAs, highlights */
-  --clr-clay: #8A5A2E;        /* dried river clay — tertiary accent */
-  --clr-rust: #B5533C;        /* muted rust — hover/link state */
-  --clr-paper: #F5EFE3;       /* warm paper — page background */
+  --clr-river: #0B3D3E;
+  /* deep river teal — header, footer, dark surfaces */
+  --clr-garden: #2F6F4E;
+  /* garden-city green — secondary accent */
+  --clr-gold: #E8A33D;
+  /* sunset-on-water gold — CTAs, highlights */
+  --clr-clay: #8A5A2E;
+  /* dried river clay — tertiary accent */
+  --clr-rust: rgb(160, 65, 45);
+  --clr-paper: #F5EFE3;
+  /* warm paper — page background */
   --clr-card: #FFFFFF;
-  --clr-ink: #1A1E1B;         /* near-black text */
-  --clr-ink-soft: #4A5450;    /* secondary text */
+  --clr-ink: #1A1E1B;
+  /* near-black text */
+  --clr-ink-soft: #4A5450;
+  /* secondary text */
   --clr-border: rgba(11, 61, 62, 0.12);
 
   /* Type */
@@ -31,13 +38,17 @@ body {
   line-height: 1.55;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   color: var(--clr-river);
   line-height: 1.2;
 }
 
-a { color: var(--clr-rust); }
+a {
+  color: var(--clr-rust);
+}
 
 .eyebrow {
   font-family: var(--font-mono);
@@ -48,7 +59,9 @@ a { color: var(--clr-rust); }
   margin: 0 0 0.35rem;
 }
 
-.eyebrow-light { color: var(--clr-gold); }
+.eyebrow-light {
+  color: var(--clr-gold);
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -320,7 +333,7 @@ button:focus-visible {
   margin-top: 1.25rem;
 }
 
-.spotlight-grid > * {
+.spotlight-grid>* {
   background: var(--clr-card);
   border-radius: var(--radius);
   padding: 1.25rem;
